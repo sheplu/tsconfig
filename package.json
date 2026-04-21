@@ -1,0 +1,52 @@
+{
+  "name": "@sheplu/tsconfig",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Reusable, fully-descriptive TypeScript 6 tsconfig bases (node, browser, react) that enforce quality, best-practice and security rules.",
+  "license": "MIT",
+  "author": "Jean Burellier",
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "typescript-6",
+    "strict",
+    "config",
+    "shared-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheplu/tsconfig.git"
+  },
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.node.json",
+    "tsconfig.native.json",
+    "tsconfig.browser.json",
+    "tsconfig.react.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./base": "./tsconfig.base.json",
+    "./node": "./tsconfig.node.json",
+    "./native": "./tsconfig.native.json",
+    "./browser": "./tsconfig.browser.json",
+    "./react": "./tsconfig.react.json"
+  },
+  "scripts": {
+    "test": "npm run test:base && npm run test:node && npm run test:native && npm run test:browser && npm run test:react",
+    "test:base": "tsc --noEmit --project test/tsconfig.base.test.json",
+    "test:node": "tsc --noEmit --project test/tsconfig.node.test.json",
+    "test:native": "tsc --noEmit --project test/tsconfig.native.test.json",
+    "test:browser": "tsc --noEmit --project test/tsconfig.browser.test.json",
+    "test:react": "tsc --noEmit --project test/tsconfig.react.test.json"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^6.0.3"
+  }
+}

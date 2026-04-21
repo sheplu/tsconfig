@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "_comment": "Native TypeScript execution variant. For projects run directly by Node's --experimental-strip-types, bun, ts-node, or tsx — no build step. Source files use explicit .ts extensions on relative imports.",
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false
+  }
+}
