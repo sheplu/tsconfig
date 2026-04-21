@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "_comment": "Browser variant. Assumes a bundler (Vite, esbuild, webpack, Rollup) handles the emitted modules, hence module=preserve + moduleResolution=bundler.",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2025", "dom", "dom.iterable"],
+    "module": "preserve",
+    "moduleResolution": "bundler"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "../tsconfig.native.json",
+  "include": ["fixture.native.ts", "native-helper.ts"]
+}
